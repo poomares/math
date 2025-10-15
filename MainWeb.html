@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mathforfun</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  </head>
+<body class="bg-normal">
+
+
+    <!-- Navbar  -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <!-- โลโก้ -->
+    <a class="navbar-brand fw-bold text-primary" href="MainWeb.html">
+      <img src="1.png" alt="Math so fun logo" width="40" height="40" class="d-inline-block align-text-top">
+      Math so fun
+    </a>
+
+    <!-- ปุ่มมือถือ -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mathNavbar" aria-controls="mathNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- เมนู -->
+    <div class="collapse navbar-collapse" id="mathNavbar">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item ">
+          <a class="nav-link active" aria-current="page" href="MainWeb.html">หน้าแรก</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="Menu1Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            คอร์สเรียน
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="Menu1Dropdown">
+            <li><a class="dropdown-item" href="math1.html">คณิตศาสตร์มัธยมศึกษาปีที่ 1</a></li>
+            <li><a class="dropdown-item" href="math2.html">คณิตศาสตร์มัธยมศึกษาปีที่ 2</a></li>
+            <li><a class="dropdown-item" href="math3.html">คณิตศาสตร์มัธยมศึกษาปีที่ 3</a></li>
+            </ul>
+          </li>
+        <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle " href="#" id="Menu1Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            แบบฝึกหัด
+            </a>
+            <ul class="dropdown-menu " aria-labelledby="Menu1Dropdown">
+            <li><a class="dropdown-item" href="Exmath1.html">แบบฝึกหัดคณิตศาสตร์มัธยมศึกษาปีที่ 1</a></li>
+            <li><a class="dropdown-item" href="Exmath2.html">แบบฝึกหัดคณิตศาสตร์มัธยมศึกษาปีที่ 2</a></li>
+            <li><a class="dropdown-item" href="Exmath3.html">แบบฝึกหัดคณิตศาสตร์มัธยมศึกษาปีที่ 3</a></li>
+            </ul>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contect.html">ติดต่อเรา</a>
+        </li>
+      </ul>
+
+      <!-- ปุ่ม/เมนูโปรไฟล์อยู่ตรงนี้ -->
+      <div class="d-flex" id="authMenu"></div>
+    </div>
+  </div>
+</nav>
+
+
+
+  <!-- popup ของ Login -->
+
+<!-- Popup Login ใช้ดีไซน์ login_form ของคุณ -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-0 border-0 bg-transparent">
+      <div class="login_form">
+        <form onsubmit="handleLogin(event)">
+          <h3>Login</h3>
+    
+
+          <div class="input_box">
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+          </div>
+
+          <div class="input_box">
+            <div class="password_title">
+              <label for="password">Password</label>
+              <a href="#">ลืมรหัสผ่าน?</a>
+            </div>
+            <input type="password" id="password" required />
+          </div>
+
+          <button type="submit">เข้าสู่ระบบ</button>
+          <p class="sign_up">ยังไม่มีบัญชีหรอ? <a href="#">สมัครเรียน</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--ข้อความล่าง navbar-->
+ <div class="container mt-5"> 
+   <div class="text-box p-4">
+    <h1 class="text-center welcome-title">ยินดีต้อนรับเข้าสู่สถาบันการเรียน<br>ที่สนุกที่สุด</h1>
+    <p class="text-center">มีข้อสอบและแบบฝึกหัดมากมายให้ลองตะลุย!</p>
+   </div>
+  </div>
+ 
+
+
+  
+<div id="videoCarousel" class="carousel slide my-5" data-bs-ride="carousel">
+  <div class="carousel-inner ratio ratio-16x9 w-50 mx-auto">
+
+    <!-- วิดีโอ 1 -->
+    <div class="carousel-item active">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/xeKxKGB8vVk" 
+                title="YouTube video" 
+                allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- วิดีโอ 2 -->
+    <div class="carousel-item">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/t50nJQVup0Q?si=PUUfY9Bwi4BHFFIO" 
+                title="YouTube video" 
+                allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- วิดีโอ 3 -->
+    <div class="carousel-item">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/BDHygyeNkIc?si=K8VlE--1zAd7LBaa" 
+                title="YouTube video" 
+                allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+
+
+
+
+  <!-- Section Header -->
+<div class="section-header text-center my-5">
+  <h2>คอร์สเรียนแนะนำพื้นฐาน</h2>
+  <p>เลือกคอร์สเรียนที่เหมาะกับคุณและเริ่มต้นการเรียนรู้ได้เลย!</p>
+</div>
+ <div class="card-list">
+        <a href="1.1 จำนวนและการดำเนินการ.html" class="card-item">
+            <img src="จำนวน.jpg" alt="Card Image">
+            <span class="developer">จำนวนและการดำเนินการ</span>
+            <h3>พื้นฐานสำคัญของคณิตศาสตร์ที่ช่วยให้ผู้เรียนเข้าใจการคิดคำนวณอย่างมีเหตุผล </h3>
+            <button class="btn-learn">เริ่มเรียน</button>
+        </a>
+        <a href="1.2 เรขาคณิต.html" class="card-item">
+            <img src="เรขา.jpg" alt="Card Image">
+            <span class="designer">เรขาคณิตสามมิติ</span>
+            <h3>เรขาคณิตสามมิติ ศึกษารูปร่าง พื้นที่ ปริมาตร</h3><br>
+            <button class="btn-learn">เริ่มเรียน</button>
+        </a>
+        <a href="1.3 พื้นที่และปริมาตรรูปเรขาคณิต.html" class="card-item">
+          <img src="พื้นที่.jpg" alt="Card Image">
+          <span class="editor">พื้นที่และปริมาตรรูปเรขาคณิต</span>
+          <h3> ความรู้จักรูปทรงเรขาคณิต 3 มิติอย่างละเอียด พร้อมสรุปสูตรพื้นที่ผิวและปริมาตร</h3>
+          <button class="btn-learn">เริ่มเรียน</button>
+        </a>
+    </div><footer class="site-footer mt-5 ">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <h5 class="footer-heading">
+          Math so fun
+        </h5>
+        <p class="footer-text">สถาบันการเรียนคณิตศาสตร์ที่สนุกที่สุด พร้อมแบบฝึกหัดและคอร์สเรียนคุณภาพที่เข้าใจง่าย</p>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <h5 class="footer-heading">ลิงก์ด่วน</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="MainWeb.html">หน้าแรก</a></li>
+          <li><a href="math1.html">คอร์สเรียน</a></li>
+          <li><a href="Exmath1.html">แบบฝึกหัด</a></li>
+          <li><a href="contect.html">ติดต่อเรา</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
+        <h5 class="footer-heading">ติดต่อเรา</h5>
+        <ul class="list-unstyled footer-contact">
+          <li><i class="bi bi-telephone-fill"></i> <span>085-571-4340</span></li>
+          <li><i class="bi bi-envelope-fill"></i> <span>Mathsofun@gmail.com</span></li>
+          <li><i class="bi bi-facebook"></i> <span>Mathsofun_page</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="copyright-text">
+          Copyright &copy; 2025 All Rights Reserved by Math so fun.
+        </p>
+        <p class="credits-text">
+          ขอบคุณคลิปวิดีโอจากช่อง: We By The Brain และ Mr. Phoops และ SmartMathPro
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+        
+
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="auth.js"></script>
+   <script>
+  // ตรวจสอบว่า login หรือไม่
+  const username = localStorage.getItem("username");
+  if (!username) {
+    // ถ้ายังไม่ login → redirect ไปหน้า login.html
+    window.location.href = "login.html";
+  } else {
+    // login แล้ว → render เมนูโปรไฟล์
+    renderAuthMenu();
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,554 @@
+/* ==================== General ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Prompt', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Background */
+body.bg-login {
+  background: url("PT.1.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.bg-normal {
+  background: url("PT.2.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.bg-normal::before,
+body.bg-normal::after {
+  content: "";
+  position: absolute;
+  border-radius: 50% 40% 60% 30% / 40% 60% 30% 50%;
+  background-color: #D97E3E;
+  border: 4px solid #fffcfc;
+  z-index: -1;
+}
+
+body.bg-login::before,
+body.bg-login::after {
+  display: none;
+}
+
+/* ==================== Navbar ==================== */
+.navbar {
+  background: linear-gradient(to bottom, #FFFFFF, #F5F5F5);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 0.8rem 1rem;
+  font-family: 'Prompt', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff6600 !important;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 10px;
+  color: #333 !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ff6600 !important;
+}
+
+/* ==================== Buttons ==================== */
+.btn-primary {
+  background-color: #ff6600;
+  border-color: #ff6600;
+}
+
+.btn-primary:hover {
+  background-color: #e05500;
+  border-color: #e05500;
+}
+
+.btn-outline-primary {
+  color: #ff6600;
+  border-color: #ff6600;
+}
+
+.btn-outline-primary:hover {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+.btn-custom {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/* ==================== Welcome Box ==================== */
+.text-box {
+  border: 3px solid #e8b07b;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.welcome-title {
+  color: #000;
+}
+
+/* ==================== Video Carousel ==================== */
+#videoCarousel {
+  display: none;
+  margin: 50px auto;
+}
+
+#videoCarousel .carousel-control-prev,
+#videoCarousel .carousel-control-next {
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  border-radius: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+#videoCarousel .carousel-control-prev {
+  left: 15px;
+}
+
+#videoCarousel .carousel-control-next {
+  right: 15px;
+}
+
+#videoCarousel .carousel-control-prev-icon,
+#videoCarousel .carousel-control-next-icon {
+  display: none;
+}
+
+#videoCarousel .carousel-control-prev::before,
+#videoCarousel .carousel-control-next::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+}
+
+#videoCarousel .carousel-control-prev::before {
+  transform: rotate(135deg);
+}
+
+#videoCarousel .carousel-control-next::before {
+  transform: rotate(-45deg);
+}
+
+/* ==================== Card ==================== */
+.card {
+  border: 3px solid #ff7700;
+  border-radius: 20px;
+}
+
+/* ==================== Login Form (Updated) ==================== */
+.login_form {
+  width: 100%;
+  max-width: 450px;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 40px 35px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #ff6600;
+  margin: auto;
+}
+
+.login-logo {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+}
+
+.login_form h3 {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.input_box label {
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+form .input_box input {
+  width: 100%;
+  height: 50px;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  outline: none;
+  background: #f7f7f7;
+  font-size: 17px;
+  padding: 0 20px;
+  margin-bottom: 25px;
+  transition: border-color 0.3s ease;
+}
+
+form .input_box input:focus {
+  border-color: #ff6600;
+  background: #fff;
+}
+
+.password_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form button {
+  width: 100%;
+  height: 56px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: #ff6600;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-bottom: 28px;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background: #e05500;
+}
+
+.sign_up {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+/* --- Form Links (Updated) --- */
+.password_title a,
+.sign_up a,
+.login_form .text-center a {
+  color: #ff6600;
+  font-weight: 700;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+.password_title a {
+  font-size: 14px; /* Keep font size smaller for "Forgot Password" */
+}
+
+.password_title a:hover,
+.sign_up a:hover,
+.login_form .text-center a:hover {
+  text-decoration: underline;
+}
+
+
+.divider-pseudo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #888;
+  margin: 25px 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.divider-pseudo::before,
+.divider-pseudo::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.divider-pseudo::before {
+  margin-right: 1rem;
+}
+
+.divider-pseudo::after {
+  margin-left: 1rem;
+}
+
+/* ==================== card 3  ==================== */
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1250px;
+    margin: 5px auto;
+    padding: 20px;
+    gap: 20px;
+}
+.card-list .card-item {
+    background: #fff;
+    padding: 26px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+}
+.card-list .card-item:hover {
+    border: 2px solid #000;
+}
+.card-list .card-item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.card-list span {
+    display: inline-block;
+    background: #F7DFF5;
+    margin-top: 32px;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+.card-list .developer {
+    background-color: #F7DFF5;
+    color: #B22485;
+}
+.card-list .designer {
+    background-color: #d1e8ff;
+    color: #2968a8;
+}
+.card-list .editor {
+    background-color: #d6f8d6;
+    color: #205c20;
+}
+.card-item h3 {
+    color: #000;
+    font-size: 1.438rem;
+    margin-top: 28px;
+    font-weight: 600;
+}
+
+.card-item .btn-learn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #ffa468;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.card-item:hover .btn-learn {
+  background-color: #e05500;
+}
+
+@media (max-width: 1200px) {
+    .card-list .card-item {
+        padding: 15px;
+    }
+}
+@media screen and (max-width: 980px) {
+    .card-list {
+        margin: 0 auto;
+    }
+}
+/* ==================== section-header ==================== */
+.section-header {
+  border: 2px solid #e8b07b;
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 25px;
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.section-header::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #ff7700;
+  margin: 0 auto 20px auto;
+  border-radius: 2px;
+}
+.section-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000;
+}
+.section-header p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* ==================== Footer ==================== */
+.site-footer {
+  background-color: #26272b;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #737373;
+}
+
+.site-footer .footer-heading {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.site-footer .footer-text {
+  color: #a2a2a2;
+}
+
+.site-footer a {
+  color: #737373;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+  color: #ff6600;
+}
+
+.site-footer .footer-links {
+  padding-left: 0;
+}
+
+.site-footer .footer-links li {
+  margin-bottom: 10px;
+}
+
+.site-footer .footer-contact i {
+  color: #ff6600;
+  margin-right: 12px;
+  font-size: 1.1rem;
+}
+
+.site-footer .footer-contact li {
+  margin-bottom: 10px;
+}
+
+.site-footer .footer-divider {
+  border-top-color: #4b4c4f;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.site-footer .copyright-text,
+.site-footer .credits-text {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ==================== Custom Success Modal ==================== */
+#successModal .modal-content,
+#passwordResetSuccessModal .modal-content {
+  background-color: #fff;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+#successModal .success-icon,
+#passwordResetSuccessModal .success-icon {
+  color: #28a745;
+}
+
+#successModal .modal-title,
+#passwordResetSuccessModal .modal-title {
+  font-weight: 700;
+}
+
+#successModal .btn-primary,
+#passwordResetSuccessModal .btn-primary {
+  background-color: #ff6600;
+  border-color: #ff6600;
+  padding: 10px 30px;
+  font-weight: 600;
+}
+
+#successModal .btn-primary:hover,
+#passwordResetSuccessModal .btn-primary:hover {
+  background-color: #e05500;
+  border-color: #e05500;
+}
+
+/* ==================== Fix Modal Backdrop ==================== */
+.modal-backdrop {
+  --bs-backdrop-bg: #000;
+  --bs-backdrop-opacity: 0.5;
+}
+
+/* ==================== Responsive Footer ==================== */
+@media (max-width: 767.98px) {
+  .site-footer .footer-heading,
+  .site-footer .footer-text {
+    text-align: center;
+  }
+
+  .site-footer .footer-links,
+  .site-footer .footer-contact {
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .site-footer .col-lg-4,
+  .site-footer .col-md-6 {
+    text-align: center;
+  }
+}
+
+/* ใส่โค้ดนี้ใน <style> ของคุณ */
+.btn-custom-orange {
+  background-color: #ff6600; /* สีส้ม (สีหลักของเว็บ) */
+  border-color: #ff6600;
+  color: #fff;
+}
+
+.btn-custom-orange:hover {
+  background-color: #e05500; /* สีส้มที่เข้มขึ้น */
+  border-color: #e05500;
+  color: #fff;
+}

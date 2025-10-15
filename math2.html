@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คณิตศาสตร์ ม.2 - Math so fun</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="auth.js"></script>
+</head>
+<body class="bg-normal">
+   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="MainWeb.html">
+          <img src="1.png" alt="Math so fun logo" width="40" height="40" class="d-inline-block align-text-top">
+          Math so fun
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mathNavbar" aria-controls="mathNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mathNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="MainWeb.html">หน้าแรก</a>
+            </li>
+             <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle active" href="#" id="Menu1Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                คอร์สเรียน
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="Menu1Dropdown">
+                  <li><a class="dropdown-item" href="math1.html">คณิตศาสตร์มัธยมศึกษาปีที่ 1</a></li>
+                  <li><a class="dropdown-item" href="math2.html">คณิตศาสตร์มัธยมศึกษาปีที่ 2</a></li>
+                  <li><a class="dropdown-item" href="math3.html">คณิตศาสตร์มัธยมศึกษาปีที่ 3</a></li>
+                </ul>
+              </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle " href="#" id="Menu2Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                แบบฝึกหัด
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="Menu2Dropdown">
+                  <li><a class="dropdown-item" href="Exmath1.html">แบบฝึกหัดคณิตศาสตร์มัธยมศึกษาปีที่ 1</a></li>
+                  <li><a class="dropdown-item" href="Exmath2.html">แบบฝึกหัดคณิตศาสตร์มัธยมศึกษาปีที่ 2</a></li>
+                  <li><a class="dropdown-item" href="Exmath3.html">แบบฝึกหัดคณิตศาสตร์มัธยมศึกษาปีที่ 3</a></li>
+                </ul>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contect.html">ติดต่อเรา</a>
+            </li>
+          </ul>
+          <div class="d-flex" id="authMenu"></div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="section-header text-center">
+          <h2>คอร์สเรียนคณิตศาสตร์ มัธยมศึกษาปีที่ 2</h2>
+          <p>ต่อยอดความรู้สู่เนื้อหาที่ซับซ้อนขึ้น ทั้งเรื่องเลขยกกำลัง ทฤษฎีบทพีทาโกรัส และความคล้าย</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm">
+              <img src="เลขและราก.jpg" class="card-img-top" alt="เลขยกกำลังและราก">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">เรื่อง เลขยกกำลังและราก</h5>
+                <p class="card-text">ทำความเข้าใจแนวคิดของเลขยกกำลังและรากที่สอง เพื่อแก้ปัญหาทางคณิตศาสตร์</p>
+                <a href="2.1 เลขยกกำลังและราก.html" class="btn btn-primary mt-auto">ดูรายละเอียด</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm">
+              <img src="ความคล้ายเลขคณิต.jpg" class="card-img-top" alt="ความคล้ายของรูปเรขาคณิต">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">เรื่อง ความคล้ายของรูปเรขาคณิต</h5>
+                <p class="card-text">สำรวจคุณสมบัติของรูปสามเหลี่ยมคล้าย และการนำไปประยุกต์ใช้ในชีวิตจริง</p>
+                <a href="2.2 ความคล้ายของรูปเรขาคณิต.html" class="btn btn-primary mt-auto">ดูรายละเอียด</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm">
+              <img src="พื้นที่ผิวและปริมาตร 3 มิติ.jpg" class="card-img-top" alt="พื้นที่ผิวและปริมาตร">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">เรื่อง พื้นที่ผิวและปริมาตรรูปเรขาคณิต 3 มิติ</h5>
+                <p class="card-text">คำนวณพื้นที่ผิวและปริมาตรของพีระมิด กรวย และทรงกลม อย่างแม่นยำ</p>
+                <a href="3.3 เรขาคณิตของวงกลม.html" class="btn btn-primary mt-auto">ดูรายละเอียด</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+     <footer class="site-footer mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <h5 class="footer-heading">
+              Math so fun
+            </h5>
+            <p class="footer-text">สถาบันการเรียนคณิตศาสตร์ที่สนุกที่สุด พร้อมแบบฝึกหัดและคอร์สเรียนคุณภาพที่เข้าใจง่าย</p>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <h5 class="footer-heading">ลิงก์ด่วน</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="MainWeb.html">หน้าแรก</a></li>
+              <li><a href="math1.html">คอร์สเรียน</a></li>
+              <li><a href="Exmath1.html">แบบฝึกหัด</a></li>
+              <li><a href="contect.html">ติดต่อเรา</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
+            <h5 class="footer-heading">ติดต่อเรา</h5>
+            <ul class="list-unstyled footer-contact">
+              <li><i class="bi bi-telephone-fill"></i> <span>085-571-4340</span></li>
+              <li><i class="bi bi-envelope-fill"></i> <span>Mathsofun@gmail.com</span></li>
+              <li><i class="bi bi-facebook"></i> <span>Mathsofun_page</span></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="copyright-text">
+              Copyright &copy; 2025 All Rights Reserved by Math so fun.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="auth.js"></script>
+</body>
+</html>
