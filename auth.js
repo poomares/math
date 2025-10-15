@@ -8,7 +8,7 @@ function handleLogin(event) {
   const username = email.split('@')[0];
   if (email && password) {
     localStorage.setItem("username", username);
-    window.location.href = "MainWeb.html";
+    window.location.href = "index.html";
   }
 }
 
@@ -138,4 +138,5 @@ function renderAuthMenu() {
 
     if (videoCarousel) videoCarousel.style.display = "none";
   }
+
 }
